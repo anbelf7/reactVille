@@ -1,38 +1,293 @@
+:root {
+  --white-color: #ffffff;
+  --light-color: #eff4ff;
+  --body-color: #c9d3e9;
+  --black-color: #282828;
+  --primary-color: #020122;
+
+  --caselle: #25f500;
+}
+@font-face {
+  font-family: Montserrat;
+  src: './assets/font/Montserrat.ttf';
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+body {
+  font-family: Montserrat;
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  background-color: var(--body-color);
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  /* display: grid;
+  grid-template-rows: 7rem 1fr 7rem; */
   display: flex;
   flex-direction: column;
-  align-items: center;
+  height: 100vh;
+}
+
+/*? ----- HEADER ----- */
+.App header,
+.App footer {
+  /* height: 7rem; */
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 1.5rem 4rem;
+}
+.App header {
+  justify-content: space-between;
+}
+.App header h1 {
+  width: 27rem;
+}
+.App header ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  width: 27rem;
+}
+.App header a {
+  text-decoration: none;
+  color: var(--white-color);
+}
+.App header a.activeItem,
+.App header a:hover {
+  color: var(--caselle);
+}
+.App header li {
+  /* margin-left: 2rem; */
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.App button {
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  border-radius: 3px;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+  cursor: pointer;
+}
+.App button:focus {
+  outline: none;
+}
+.App header button.reset {
+  background-color: var(--caselle);
+  /* border: 2px solid red; */
+  color: var(--primary-color);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*? ----- MAPPA ----- */
+.Mappa {
+  flex: 1;
+  display: grid;
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  gap: 2rem;
+  /* height: calc(100vh - 14rem); */
+  padding: 2rem;
+}
+.Mappa .Casella {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(2, 1, 34, 0.05),
+      rgba(2, 1, 34, 0.2)
+    ),
+    url(./assets/ground.jpg);
+
+  /* background-image: url(./assets/ground.jpg); */
+  background-position: center;
+  background-size: cover;
+  border-radius: 1rem;
+  /* border: 4px solid var(--primary-color); */
+  display: flex;
+  flex-direction: column;
+  padding: 0 1.5rem;
+  /* height: 23vh; */
+}
+.Mappa .Casella.attacco {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(37, 245, 0, 0.03) 50%,
+      rgba(37, 245, 0, 0.25)
+    ),
+    url(./assets/ground.jpg);
+}
+
+.Mappa .Casella .mortali {
+  /* background-color: black; */
+  /* height: 5rem; */
+  padding: 0.5rem 0;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: default;
+}
+.Mappa .Casella .mortali .icon {
+  font-size: 2.5rem;
+  margin: 0 0.5rem;
+  /* background-color: #25f500; */
+  /* border-radius: 50%; */
+}
+.Mappa .Casella .edifici {
+  /* background-color: red; */
+  /* background-image: url(./assets/villa.png); */
+  /* background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat; */
+  flex: 1;
+  /* width: 20%; */
+  /* height: 50%; */
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Mappa .Casella .edifici img {
+  /* width: 100%; */
+  height: 8rem;
+  opacity: 0.75;
+}
+.Mappa .Casella .valore {
+  /* background-color: black; */
+  color: var(--white-color);
+  /* height: 4rem; */
+  padding: 0.45rem 0;
+
+  /* width: auto; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2.5rem;
+  cursor: default;
+}
+.Mappa .Casella .valore span {
+  font-size: 1.7rem;
+  text-transform: uppercase;
+}
+
+/*? ----- START ----- */
+.start {
+  height: calc(100vh - 7rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  font-size: 3rem;
+}
+.start p,
+.start button {
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+.start select {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  width: 5rem;
+  margin-left: 0.5rem;
+  border-radius: 3px;
+}
+.start select:focus {
+  outline: none;
+}
+.start .sfondo {
+  position: absolute;
+  z-index: -10;
+  height: 70%;
+  opacity: 0.3;
+}
+
+/*? ----- FOOTER ----- */
+.App footer {
+  background-color: var(--white-color);
+
+  width: 100%;
+  /* height: 8rem; */
+  /* left: 50%; */
+  /* position: fixed; */
+  /* transform: translateX(-50%); */
+  display: flex;
+  justify-content: space-between;
+  /* border-top: 1px solid #ddd; */
+}
+.App footer .infestatori {
+  color: var(--primary-color);
+}
+.App footer .infestatori ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 2rem;
+}
+.App footer .infestatori li {
+  margin: 0.4rem 0.7rem;
+  /* background-color: var(--caselle); */
+  border-bottom: 2px solid var(--caselle);
+  border-top: 2px solid var(--caselle);
+  padding: 0.5rem 0.7rem;
+  /* border-radius: 1rem; */
+}
+.App footer .plasma {
+  /* color: var(--primary-color); */
+}
+.App footer .plasma span {
+  display: block;
+  color: var(--primary-color);
+  padding-left: 1rem;
+  padding-bottom: 0.5rem;
+}
+.App footer .ProgressBar {
+  color: var(--primary-color);
+  width: 11.5rem;
+  height: 1.5rem;
+  background-color: var(--light-color);
+  border-radius: 5rem;
+  box-shadow: inset 0 0 0.7rem rgba(2, 1, 34, 0.2);
+  overflow: hidden;
+}
+.App footer .ProgressBar .progress {
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem 1.5rem;
+  background-image: linear-gradient(
+    to left,
+    rgba(37, 245, 0, 0.7),
+    rgba(37, 245, 0, 0.7)
+  );
+  transform: translateX(-100%);
+  transition: transform 1s ease-in-out;
+}
+
+/*? ----- TOOLTIP ----- */
+.__react_component_tooltip {
+  /* height: 10rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.__react_component_tooltip span {
+  text-transform: uppercase;
+  margin-bottom: 10rem;
+  text-align: center;
 }

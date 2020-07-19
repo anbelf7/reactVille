@@ -1,0 +1,60 @@
+[
+  {
+    "id": 1,
+    "tipologia": "spiritelli",
+    "elementi": ["gremlin", "stormi", "order"],
+    "valorePaura": 3,
+    "edificiInfestabili": [1, 2, 5, 4, 6]
+  },
+  {
+    "id": 2,
+    "tipologia": "disturbatori",
+    "elementi": [
+      "spook",
+      "omini del sonno",
+      "criniere",
+      "poltergeist",
+      "doppi"
+    ],
+    "valorePaura": 5,
+    "edificiInfestabili": [3, 7, 4]
+  },
+  {
+    "id": 3,
+    "tipologia": "elementali",
+    "elementi": [
+      "spiriti dell’aria",
+      "spiriti del fuoco",
+      "spiriti dell’acqua",
+      "spiriti della terra"
+    ],
+    "valorePaura": 4,
+    "edificiInfestabili": [2, 3, 6]
+  },
+  {
+    "id": 4,
+    "tipologia": "vapore",
+    "elementi": [
+      "spiriti",
+      "windingo",
+      "spiriti del tuono",
+      "apparizioni (assassini)"
+    ],
+    "valorePaura": 6,
+    "edificiInfestabili": [1, 4]
+  },
+  {
+    "id": 5,
+    "tipologia": "spaventatori",
+    "elementi": ["imbroglioni", "ombre", "fantasmi"],
+    "valorePaura": 8,
+    "edificiInfestabili": [1, 2, 3, 5, 6, 7]
+  },
+  {
+    "id": 6,
+    "tipologia": "orrori",
+    "elementi": ["spettri", "ectoplasmi", "cavalieri decapitati"],
+    "valorePaura": 9,
+    "edificiInfestabili": [1, 7, 5, 6]
+  }
+]
