@@ -57,7 +57,7 @@ class App extends Component {
 
     let arrayTemp = [];
     this.state.infestatori.map((e, i) => {
-      if (i != random) {
+      if (i !== random) {
         arrayTemp.push(e);
       }
     });
@@ -102,7 +102,7 @@ class App extends Component {
               </>
             ) : (
               <div className="start">
-                <img src={sfondo} className="sfondo" />
+                <img src={sfondo} className="sfondo" alt="ghost" />
                 <form onSubmit={this.handleSubmit}>
                   <label>Scegli con quanti infestatori vuoi attaccare </label>
                   <select

@@ -29,7 +29,7 @@ export class Footer extends Component {
           onClick={() => {
             let arrayTemp = [];
             this.state.tipoInfestatori.map((e, i) => {
-              if (i != this.props.indexElem) {
+              if (i !== this.props.indexElem) {
                 arrayTemp.push(e);
               }
             });

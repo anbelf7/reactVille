@@ -60,7 +60,10 @@ export class Casella extends Component {
           })}
         </div>
         <div className="edifici">
-          <img src={require(`../assets/edifici/${this.props.edificio}.png`)} />
+          <img
+            src={require(`../assets/edifici/${this.props.edificio}.png`)}
+            alt={this.props.edificio}
+          />
         </div>
         <div className="valore">
           <span>{this.props.edificio} </span>
