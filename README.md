@@ -3,7 +3,7 @@
 Gioco creato con React basato su Ghost Master.<br />
 Clicca su questo [link per giocare.](http://localhost:3000)
 
-### `Regole`
+### Regole
 
 In ReactVille guiderai un'orda di infestatori con l'obiettivo di
 risvegliare lo spirito Darkling e dominare l'intero pianeta.<br />

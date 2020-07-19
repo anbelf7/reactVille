@@ -4,8 +4,7 @@
   --body-color: #c9d3e9;
   --black-color: #282828;
   --primary-color: #020122;
-
-  --caselle: #25f500;
+  --secondary-color: #25f500;
 }
 @font-face {
   font-family: Montserrat;
@@ -65,7 +64,7 @@ body {
 }
 .App header a.activeItem,
 .App header a:hover {
-  color: var(--caselle);
+  color: var(--secondary-color);
 }
 .App header li {
   /* margin-left: 2rem; */
@@ -85,7 +84,7 @@ body {
   outline: none;
 }
 .App header button.reset {
-  background-color: var(--caselle);
+  background-color: var(--secondary-color);
   /* border: 2px solid red; */
   color: var(--primary-color);
 }
@@ -215,6 +214,44 @@ body {
   opacity: 0.3;
 }
 
+/*? ----- PAGINA ----- */
+.App .pagina {
+  /* background-color: red; */
+  height: 100%;
+  margin: 3rem 5rem;
+  /* padding: 2rem; */
+}
+
+/*? ----- REGOLE ----- */
+.App .Regole {
+}
+.App .Regole p {
+  margin-bottom: 1rem;
+  line-height: 3rem;
+}
+.App .Regole h1 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  /* color: var(--primary-color); */
+}
+
+/*? ----- CARATTERISTICHE ----- */
+.App .Caratteristiche {
+  display: flex;
+  justify-content: space-between;
+}
+.App .Caratteristiche .carContainer {
+  background-color: blue;
+  flex: 1;
+}
+.App .Caratteristiche .carMortali {
+  margin: 0 2rem;
+}
+.App .Caratteristiche h2 {
+  text-align: center;
+}
+
 /*? ----- FOOTER ----- */
 .App footer {
   background-color: var(--white-color);
@@ -241,9 +278,9 @@ body {
 }
 .App footer .infestatori li {
   margin: 0.4rem 0.7rem;
-  /* background-color: var(--caselle); */
-  border-bottom: 2px solid var(--caselle);
-  border-top: 2px solid var(--caselle);
+  /* background-color: var(--secondary-color); */
+  border-bottom: 2px solid var(--secondary-color);
+  border-top: 2px solid var(--secondary-color);
   padding: 0.5rem 0.7rem;
   /* border-radius: 1rem; */
 }

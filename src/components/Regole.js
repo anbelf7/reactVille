@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export class Regole extends Component {
   render() {
     return (
-      <div>
+      <div className="Regole pagina">
         <p>
           In ReactVille guiderai un'orda di infestatori con l'obiettivo di
           risvegliare lo spirito Darkling e dominare l'intero pianeta.
