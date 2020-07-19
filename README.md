@@ -1,7 +1,7 @@
 ## ReactVille
 
 Gioco creato con React basato su Ghost Master.<br />
-Clicca su questo [link per giocare.](http://localhost:3000)
+Clicca su questo [link per giocare.](https://romantic-brown-0ed070.netlify.app)
 
 ### Regole
 
@@ -15,4 +15,4 @@ un edificio e a combattere contro un mortale. <br />
 Nel momento in cui la barra del plasma sarà piena lo spirito Darkling
 verrà risvegliato e vincerai la partita.
 
-**Visita la pagina [regole](http://localhost:3000) all'interno del sito per vedere come si gioca.**
+**Visita la pagina [regole](https://romantic-brown-0ed070.netlify.app/regole) all'interno del sito per vedere come si gioca.**
