@@ -218,19 +218,21 @@ body {
 .App .pagina {
   /* background-color: red; */
   height: 100%;
-  margin: 3rem 5rem;
+  margin: 1rem 2rem;
   /* padding: 2rem; */
 }
 
 /*? ----- REGOLE ----- */
 .App .Regole {
+  margin: 2rem auto;
 }
 .App .Regole p {
   margin-bottom: 1rem;
-  line-height: 3rem;
+  line-height: 2.2rem;
 }
-.App .Regole h1 {
-  margin-bottom: 1rem;
+
+.App .Regole h2 {
+  margin: 3rem 0 1rem 0;
   font-size: 2.5rem;
   text-transform: uppercase;
   /* color: var(--primary-color); */
@@ -239,15 +241,63 @@ body {
 /*? ----- CARATTERISTICHE ----- */
 .App .Caratteristiche {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 .App .Caratteristiche .carContainer {
-  background-color: blue;
+  /* background-color: blue; */
+  flex: 1;
+  padding: 1rem 1.5rem;
+  border-radius: 3px;
+  transition: background-image 1s;
+  min-width: 32rem;
+}
+.App .Caratteristiche .carContainer:hover {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(2, 1, 34, 0.1),
+    rgba(2, 1, 34, 0.2)
+  );
+}
+.App .Caratteristiche .carContainer .titoloLi {
+  height: 1rem;
+  background-color: transparent;
+  font-size: 1.4rem;
+  align-items: flex-start;
+}
+
+.App .Caratteristiche .carContainer ul {
+  list-style-type: none;
+}
+.App .Caratteristiche .carContainer li {
+  padding: 1rem 0;
+  background-color: var(--white-color);
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+  text-align: center;
+  opacity: 0.8;
+}
+.App .Caratteristiche .carContainer li:hover {
+  opacity: 1;
+}
+.App .Caratteristiche .carContainer li > div {
   flex: 1;
 }
-.App .Caratteristiche .carMortali {
-  margin: 0 2rem;
+
+.App .Caratteristiche .carEdifici img,
+.App .Caratteristiche .carMortali span {
+  height: 3.9rem;
+  font-size: 3.5rem;
 }
+
+.App .Caratteristiche .carInfestatori img {
+  height: 3rem;
+  padding: 0 0.5rem;
+}
+
 .App .Caratteristiche h2 {
   text-align: center;
 }
@@ -272,16 +322,27 @@ body {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   margin: 0 2rem;
+  /* border-bottom: 2px solid var(--secondary-color);
+  border-top: 2px solid var(--secondary-color); */
 }
+
 .App footer .infestatori li {
   margin: 0.4rem 0.7rem;
   /* background-color: var(--secondary-color); */
-  border-bottom: 2px solid var(--secondary-color);
-  border-top: 2px solid var(--secondary-color);
-  padding: 0.5rem 0.7rem;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(37, 245, 0, 0.2),
+    rgba(37, 245, 0, 0.2)
+  );
+  color: var(--primary-color);
+  border-radius: 3px;
+  border: 1px solid var(--secondary-color);
+  font-size: 1.4rem;
+  cursor: default;
+  padding: 0.3rem 0.6rem;
   /* border-radius: 1rem; */
 }
 .App footer .plasma {

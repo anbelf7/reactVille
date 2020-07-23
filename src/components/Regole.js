@@ -18,7 +18,7 @@ export class Regole extends Component {
           verrà risvegliato e vincerai la partita.
         </p>
 
-        <h1>Come si gioca</h1>
+        <h2>Come si gioca</h2>
         <p>
           Il gioco è diviso in turni. All'inizio bisogna scegliere con quanti
           infestatori attaccare la città.

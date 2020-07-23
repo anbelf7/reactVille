@@ -4,7 +4,7 @@
     "tipologia": "spiritelli",
     "elementi": ["gremlin", "stormi", "order"],
     "valorePaura": 3,
-    "edificiInfestabili": [1, 2, 5, 4, 6]
+    "edificiVietati": ["casa", "villa", "scuola"]
   },
   {
     "id": 2,
@@ -17,7 +17,7 @@
       "doppi"
     ],
     "valorePaura": 5,
-    "edificiInfestabili": [3, 7, 4]
+    "edificiVietati": ["condominio", "villa", "campus"]
   },
   {
     "id": 3,
@@ -29,7 +29,7 @@
       "spiriti della terra"
     ],
     "valorePaura": 4,
-    "edificiInfestabili": [2, 3, 6]
+    "edificiVietati": ["casa", "scuola", "condominio"]
   },
   {
     "id": 4,
@@ -41,20 +41,20 @@
       "apparizioni (assassini)"
     ],
     "valorePaura": 6,
-    "edificiInfestabili": [1, 4]
+    "edificiVietati": ["hotel", "campus"]
   },
   {
     "id": 5,
     "tipologia": "spaventatori",
     "elementi": ["imbroglioni", "ombre", "fantasmi"],
     "valorePaura": 8,
-    "edificiInfestabili": [1, 2, 3, 5, 6, 7]
+    "edificiVietati": ["campus"]
   },
   {
     "id": 6,
     "tipologia": "orrori",
     "elementi": ["spettri", "ectoplasmi", "cavalieri decapitati"],
     "valorePaura": 9,
-    "edificiInfestabili": [1, 7, 5, 6]
+    "edificiVietati": ["hotel"]
   }
 ]
