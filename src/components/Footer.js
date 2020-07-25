@@ -7,8 +7,19 @@ export class Footer extends Component {
 
     this.state = {
       tipoInfestatori: this.props.tipoInfestatori,
+      // turno: true,
     };
   }
+  handleButton = () => {
+    let arrayTemp = [];
+    this.state.tipoInfestatori.map((e, i) => {
+      if (i !== this.props.indexElem) {
+        arrayTemp.push(e);
+      }
+    });
+    this.setState({ tipoInfestatori: arrayTemp });
+    this.props.turno();
+  };
 
   render() {
     return (
@@ -19,23 +30,15 @@ export class Footer extends Component {
         </div>
         <div className="infestatori">
           <ul>
-            {this.state.tipoInfestatori.map((e) => {
-              return <li>{e}</li>;
+            {this.state.tipoInfestatori.map((infestatore) => {
+              return <li>{infestatore}</li>;
             })}
           </ul>
         </div>
 
         <button
-          onClick={() => {
-            let arrayTemp = [];
-            this.state.tipoInfestatori.map((e, i) => {
-              if (i !== this.props.indexElem) {
-                arrayTemp.push(e);
-              }
-            });
-            this.setState({ tipoInfestatori: arrayTemp });
-            this.props.turno();
-          }}
+          disabled={!this.props.isTurno ? 'true' : ''}
+          onClick={this.handleButton}
         >
           Turni Rimanenti: {this.state.tipoInfestatori.length}
         </button>

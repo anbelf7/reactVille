@@ -20,6 +20,10 @@ class App extends Component {
       infestatori: [],
       indexElem: 0,
       btnReset: false,
+      casellaAttacco: null,
+      // valoreEdificio: 0,
+      isTurno: true,
+      isAttacco: true,
     };
   }
 
@@ -27,6 +31,7 @@ class App extends Component {
     let numInfestatori = parseInt(e.target.value);
     this.setState({ numInfestatori: numInfestatori });
   };
+
   handleSubmit = (e) => {
     let arrayRandomInfestatori = [];
     e.preventDefault();
@@ -46,8 +51,16 @@ class App extends Component {
       btnReset: true,
     });
   };
+
   handleReset = () => {
-    this.setState({ start: false, btnReset: false, plasma: 0 });
+    this.setState({
+      start: false,
+      btnReset: false,
+      plasma: 0,
+      casellaAttacco: null,
+      isTurno: true,
+      // valoreEdificio: 0,
+    });
   };
 
   handleTurno = () => {
@@ -61,21 +74,42 @@ class App extends Component {
         arrayTemp.push(e);
       }
     });
-    this.setState({
-      infestatori: arrayTemp,
-    });
+
     // console.log(random);
     // console.log(arrayTemp);
     // this.setState({ indexElem: random });
 
     this.setState((prevState) => ({
-      plasma: prevState.plasma + 20,
+      // plasma: prevState.plasma + this.state.valoreEdificio,
       indexElem: random,
+      infestatori: arrayTemp,
+      isTurno: false,
+      isAttacco: true,
     }));
-    this.attacco();
+
+    this.state.plasma >= 100 && alert('Partita finita, hai vinto');
+    this.state.infestatori.length == 0 && alert('Partita finita, hai perso');
+
+    let attaccoRandom = Math.floor(Math.random() * 9);
+    this.setState({ casellaAttacco: attaccoRandom });
+    // this.valoreEdificio();
+    // this.attacco();
   };
-  attacco = () => {
-    let random = Math.floor(Math.random() * 9 + 1);
+
+  // attacco = () => {
+
+  // };
+
+  valoreEdificio = (valore) => {
+    this.setState({
+      // valoreEdificio: valore,
+      plasma: this.state.plasma + valore,
+      isTurno: true,
+      isAttacco: false,
+    });
+
+    // console.log(this.state.plasma);
+    // console.log('test');
   };
 
   render() {
@@ -88,7 +122,10 @@ class App extends Component {
               <>
                 <Mappa
                   numInfestatori={this.state.numInfestatori}
+                  casellaAttacco={this.state.casellaAttacco}
                   // infestatori={this.handleInfestatori}
+                  valoreEdificio={this.valoreEdificio}
+                  isAttacco={this.state.isAttacco}
                 />
                 <Footer
                   tipoInfestatori={this.state.infestatori.map(
@@ -98,6 +135,7 @@ class App extends Component {
                   turno={this.handleTurno}
                   indexElem={this.state.indexElem}
                   plasma={this.state.plasma}
+                  isTurno={this.state.isTurno}
                 />
               </>
             ) : (

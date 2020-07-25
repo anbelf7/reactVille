@@ -41,7 +41,7 @@ export class Caratteristiche extends Component {
               <div></div>
               <div></div>
               <div>Plasma</div>
-              <div>Credenza</div>
+              <div>Paura</div>
             </li>
             {mortali.map((mortale) => (
               <li>
@@ -52,7 +52,7 @@ export class Caratteristiche extends Component {
                   {mortale.nome.charAt(0).toUpperCase() + mortale.nome.slice(1)}
                 </div>
                 <div>{mortale.valorePlasma}</div>
-                <div>{mortale.credenza}</div>
+                <div>{mortale.paura}</div>
               </li>
             ))}
           </ul>
@@ -62,7 +62,7 @@ export class Caratteristiche extends Component {
           <ul>
             <li className="titoloLi">
               <div></div>
-              <div>Paura</div>
+              <div>Potere</div>
               <div>Edifici Vietati</div>
             </li>
             {infestatori.map((infestatore) => (
@@ -71,7 +71,7 @@ export class Caratteristiche extends Component {
                   {infestatore.tipologia.charAt(0).toUpperCase() +
                     infestatore.tipologia.slice(1)}
                 </div>
-                <div>{infestatore.valorePaura}</div>
+                <div>{infestatore.potere}</div>
                 <div>
                   {infestatore.edificiVietati.map((icon) => {
                     return (

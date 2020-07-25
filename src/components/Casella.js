@@ -24,14 +24,37 @@ export class Casella extends Component {
         }
       });
     }
-    this.setState({ persone: arrayRandom });
-    this.setState({ valoreEdificio: valore });
+    this.setState({ persone: arrayRandom, valoreEdificio: valore });
   }
+
+  // componentDidUpdate(a) {
+  //   if (this.props.id == this.props.casellaAttacco) {
+  //     this.props.valoreEdificio(this.state.valoreEdificio);
+  //     // console.log(a);
+  //   }
+  // }
+
+  // valoreEdificio = () => {
+  //   this.props.valoreEdificio(this.state.valoreEdificio);
+  // };
+  handleButton = () => {
+    this.props.valoreEdificio(this.state.valoreEdificio);
+    this.setState({ attacco: false });
+    // console.log(this.state.attacco);
+  };
 
   render() {
     return (
-      //! aggiungere classe attacco
-      <div className="Casella ">
+      <div
+        className={`Casella ${
+          this.props.id == this.props.casellaAttacco ? 'attacco' : 'disable'
+        }`}
+        // onClick={() =>
+        //   this.setState((prev) => ({
+        //     attacco: !prev.attacco,
+        //   }))
+        // }
+      >
         <div className="mortali">
           {this.state.persone.map((persona) => {
             return (
@@ -53,7 +76,7 @@ export class Casella extends Component {
                   <br />
                   Valore plasma: {persona.valorePlasma}
                   <br />
-                  Credenza: {persona.credenza}
+                  Paura: {persona.paura}
                 </ReactTooltip>
               </div>
             );
@@ -64,6 +87,14 @@ export class Casella extends Component {
             src={require(`../assets/edifici/${this.props.edificio}.png`)}
             alt={this.props.edificio}
           />
+          {this.props.id == this.props.casellaAttacco && (
+            <button
+              disabled={!this.props.isAttacco ? 'true' : ''}
+              onClick={this.handleButton}
+            >
+              Attacca
+            </button>
+          )}
         </div>
         <div className="valore">
           <span>{this.props.edificio} </span>

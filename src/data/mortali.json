@@ -3,42 +3,42 @@
     "id": 1,
     "nome": "ragazzo",
     "valorePlasma": 8,
-    "credenza": 2,
+    "paura": 2,
     "icon": "👱‍♂️"
   },
   {
     "id": 2,
     "nome": "ragazza",
     "valorePlasma": 6,
-    "credenza": 4,
+    "paura": 3,
     "icon": "👩‍🦳"
   },
   {
     "id": 3,
     "nome": "bambino",
     "valorePlasma": 5,
-    "credenza": 5,
+    "paura": 5,
     "icon": "👶"
   },
   {
     "id": 4,
     "nome": "adoratore di culto",
     "valorePlasma": 3,
-    "credenza": 8,
+    "paura": 5,
     "icon": "🧙‍♂️"
   },
   {
     "id": 5,
     "nome": "ghostbuster",
-    "valorePlasma": -5,
-    "credenza": 0,
+    "valorePlasma": -4,
+    "paura": 0,
     "icon": "👻"
   },
   {
     "id": 6,
     "nome": "esorcista",
     "valorePlasma": -3,
-    "credenza": 0,
+    "paura": 0,
     "icon": "✝️"
   }
 ]

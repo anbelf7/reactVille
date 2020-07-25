@@ -24,8 +24,8 @@ export class Regole extends Component {
           infestatori attaccare la città.
           <br /> Il numero degli infestatori determina i turni del gioco.
         </p>
-        <p></p>
-        <p></p>
+        <p>...</p>
+        <p>...</p>
       </div>
     );
   }

@@ -9,6 +9,7 @@ export class Mappa extends Component {
 
     this.state = {
       edifici: [],
+      casellaAttacco: 0,
     };
   }
 
@@ -49,6 +50,9 @@ export class Mappa extends Component {
               id={i}
               edificio={edificio.edificio}
               capienza={edificio.capienza}
+              casellaAttacco={this.props.casellaAttacco}
+              valoreEdificio={this.props.valoreEdificio}
+              isAttacco={this.props.isAttacco}
             />
           );
         })}

@@ -3,7 +3,7 @@
     "id": 1,
     "tipologia": "spiritelli",
     "elementi": ["gremlin", "stormi", "order"],
-    "valorePaura": 3,
+    "potere": 3,
     "edificiVietati": ["casa", "villa", "scuola"]
   },
   {
@@ -16,7 +16,7 @@
       "poltergeist",
       "doppi"
     ],
-    "valorePaura": 5,
+    "potere": 5,
     "edificiVietati": ["condominio", "villa", "campus"]
   },
   {
@@ -28,7 +28,7 @@
       "spiriti dell’acqua",
       "spiriti della terra"
     ],
-    "valorePaura": 4,
+    "potere": 4,
     "edificiVietati": ["casa", "scuola", "condominio"]
   },
   {
@@ -40,21 +40,21 @@
       "spiriti del tuono",
       "apparizioni (assassini)"
     ],
-    "valorePaura": 6,
+    "potere": 6,
     "edificiVietati": ["hotel", "campus"]
   },
   {
     "id": 5,
     "tipologia": "spaventatori",
     "elementi": ["imbroglioni", "ombre", "fantasmi"],
-    "valorePaura": 8,
+    "potere": 8,
     "edificiVietati": ["campus"]
   },
   {
     "id": 6,
     "tipologia": "orrori",
     "elementi": ["spettri", "ectoplasmi", "cavalieri decapitati"],
-    "valorePaura": 9,
+    "potere": 9,
     "edificiVietati": ["hotel"]
   }
 ]
