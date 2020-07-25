@@ -6,7 +6,11 @@ export class ProgressBar extends Component {
       <div className="ProgressBar">
         <div
           className="progress"
-          style={{ transform: `translateX(-${100 - this.props.plasma}%)` }}
+          style={{
+            transform: `translateX(-${
+              this.props.plasma < 100 ? 100 - this.props.plasma : 0
+            }%)`,
+          }}
         ></div>
       </div>
     );

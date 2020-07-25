@@ -88,6 +88,7 @@ class App extends Component {
     }));
 
     this.state.plasma >= 100 && alert('Partita finita, hai vinto');
+    //! aggiungere <100 e lunghezza 0 hai vinto
     this.state.infestatori.length == 0 && alert('Partita finita, hai perso');
 
     let attaccoRandom = Math.floor(Math.random() * 9);
