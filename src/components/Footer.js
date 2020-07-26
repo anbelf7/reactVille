@@ -7,7 +7,6 @@ export class Footer extends Component {
 
     this.state = {
       tipoInfestatori: this.props.tipoInfestatori,
-      // turno: true,
     };
   }
   handleButton = () => {

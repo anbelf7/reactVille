@@ -4,6 +4,7 @@ import Mappa from './components/Mappa';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Regole from './components/Regole';
+import Fine from './components/Fine';
 import Caratteristiche from './components/Caratteristiche';
 import infestatoriJson from './data/infestatori.json';
 import sfondo from './assets/ghost.png';
@@ -79,27 +80,17 @@ class App extends Component {
     // console.log(arrayTemp);
     // this.setState({ indexElem: random });
 
-    this.setState((prevState) => ({
-      // plasma: prevState.plasma + this.state.valoreEdificio,
+    this.setState({
       indexElem: random,
       infestatori: arrayTemp,
       isTurno: false,
       isAttacco: true,
-    }));
-
-    this.state.plasma >= 100 && alert('Partita finita, hai vinto');
-    //! aggiungere <100 e lunghezza 0 hai vinto
-    this.state.infestatori.length == 0 && alert('Partita finita, hai perso');
+    });
 
     let attaccoRandom = Math.floor(Math.random() * 9);
     this.setState({ casellaAttacco: attaccoRandom });
     // this.valoreEdificio();
-    // this.attacco();
   };
-
-  // attacco = () => {
-
-  // };
 
   valoreEdificio = (valore) => {
     this.setState({
@@ -128,6 +119,12 @@ class App extends Component {
                   valoreEdificio={this.valoreEdificio}
                   isAttacco={this.state.isAttacco}
                 />
+                {this.state.plasma >= 100 && (
+                  <Fine risultato="vinto" handleReset={this.handleReset} />
+                )}
+                {this.state.infestatori.length == 0 && (
+                  <Fine risultato="perso" handleReset={this.handleReset} />
+                )}
                 <Footer
                   tipoInfestatori={this.state.infestatori.map(
                     (e) =>
