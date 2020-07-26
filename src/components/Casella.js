@@ -27,16 +27,6 @@ export class Casella extends Component {
     this.setState({ persone: arrayRandom, valoreEdificio: valore });
   }
 
-  // componentDidUpdate(a) {
-  //   if (this.props.id == this.props.casellaAttacco) {
-  //     this.props.valoreEdificio(this.state.valoreEdificio);
-  //     // console.log(a);
-  //   }
-  // }
-
-  // valoreEdificio = () => {
-  //   this.props.valoreEdificio(this.state.valoreEdificio);
-  // };
   handleButton = () => {
     this.props.valoreEdificio(this.state.valoreEdificio);
     this.setState({ attacco: false });
@@ -49,16 +39,11 @@ export class Casella extends Component {
         className={`Casella ${
           this.props.id == this.props.casellaAttacco ? 'attacco' : 'disable'
         }`}
-        // onClick={() =>
-        //   this.setState((prev) => ({
-        //     attacco: !prev.attacco,
-        //   }))
-        // }
       >
         <div className="mortali">
-          {this.state.persone.map((persona) => {
+          {this.state.persone.map((persona, i) => {
             return (
-              <div>
+              <div key={i}>
                 <div
                   className="icon"
                   data-tip

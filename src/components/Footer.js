@@ -29,8 +29,8 @@ export class Footer extends Component {
         </div>
         <div className="infestatori">
           <ul>
-            {this.state.tipoInfestatori.map((infestatore) => {
-              return <li>{infestatore}</li>;
+            {this.state.tipoInfestatori.map((infestatore, i) => {
+              return <li key={i}>{infestatore}</li>;
             })}
           </ul>
         </div>

@@ -76,10 +76,6 @@ class App extends Component {
       }
     });
 
-    // console.log(random);
-    // console.log(arrayTemp);
-    // this.setState({ indexElem: random });
-
     this.setState({
       indexElem: random,
       infestatori: arrayTemp,
@@ -99,9 +95,6 @@ class App extends Component {
       isTurno: true,
       isAttacco: false,
     });
-
-    // console.log(this.state.plasma);
-    // console.log('test');
   };
 
   render() {

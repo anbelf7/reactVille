@@ -24,14 +24,6 @@ export class Mappa extends Component {
           // console.log(edificio);
           arrayRandom.push(edificio);
         }
-
-        // arrayRandom = edificiJson.map((edificio) => {
-        //   // if (random === edificio.id) {
-        //   //   // console.log(edificio);
-        //   //   // arrayRandom.push(edificio);
-        //   //   return edificio
-        //   // }
-        //   return random == edificio.id && edificio;
       });
     }
 
